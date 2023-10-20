@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Travel Bee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> 
+	<link rel="stylesheet" href="css/font-awesome.css"/>
+	<script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("Message").value;
+			var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            var namePattern = /^[A-Za-z]+$/;
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name must be filled out";
+                return false;
+            } else if (!namePattern.test(name)) {
+                document.getElementById("nameError").textContent = "Name must contain only letters";
+                return false;
+            } else {
+                document.getElementById("nameError").textContent = ""; // Clear the error message
+            }
+            if (email === "") {
+            alert("Email must be filled out");
+            return false;
+            } 
+		    if (email === "") {
+                document.getElementById("emailError").textContent = "Email must be filled out";
+                return false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Invalid email format";
+                return false;
+            } else {
+                document.getElementById("emailError").textContent = ""; // Clear the error message
+            }
+		   if (phone === "") {
+                document.getElementById("phoneError").textContent = "Phone Number must be filled out";
+                return false;
+            } else {
+                document.getElementById("phoneError").textContent = ""; // Clear the error message
+            }
+            if (message === "") {
+                document.getElementById("messageError").textContent = "Message must be filled out";
+                return false;
+            } else {
+                document.getElementById("messageError").textContent = ""; // Clear the error message
+            }
+		}
+        
+    </script>
+</head>
+<body>
+<header>
+	<div class="container agile-banner_nav">
+		<div class="row header-top">
+			<div class="col-md-7 top-right p-0">
+				<p><i class="fa fa-map-marker" aria-hidden="true"></i>Travel Bee Agency,Erode
+			</div>
+		</div>
+	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			
+			<h1><a class="navbar-brand" href="index.html">Travel Bee</a></h1>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="services.html">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pricing.html">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="projects.html">Projects</a>
+					</li>
+					<li class="nav-item pr-0 active">
+						<a class="nav-link pr-lg-0" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		  
+		</nav>
+	</div>
+</header>
+<div class="innerpage-banner">
+	<div class="layer1">
+	</div>
+</div>
+<section class="w3ls-section contact py-5">
+	<div class="container py-sm-3">
+		<div class="w3ls-title">
+			<h2 class="heading text-center mb-sm-5 mb-4">Contact Me</h2>
+		</div>
+		<div class="row contact_wthreerow agileits-w3layouts">
+		
+			<div class="col-lg-5 col-md-6 agileits_w3layouts_contact_gridl">
+				<div class="agileits_mail_grid_right_grid">
+					<h4>Contact Address</h4>
+					<p>This is the address where the Agency is located</p>
+					<ul class="contact_info">
+						<li><span class="fa fa-map-marker"></span>Travel Bee Agency,Erode Tamilnadu.</li>
+						<li><span class="fa fa-envelope"></span><a href="mailto:info@example.com">Praveen@example.com</a></li>
+						<li><span class="fa fa-phone" ></span>9537153417</li>
+						<li><span class="fa fa-globe" ></span><a href="#">Travel Bee@website.com</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-7 col-md-6 mt-md-0 mt-5 w3l_contact_form">
+				<h4>Feedback Form</h4>
+				<form action="http://localhost:5000/contact" method="post" onsubmit="return validateForm()">
+					<input type="text" id="name" placeholder="Name" required name="name">
+                    <span id="nameError" style="color: red;"></span>
+                    <input type="email" id="email" placeholder="Email" required name="email">
+                    <span id="emailError" style="color: red;"></span>
+                    <input type="text" id="phone" placeholder="Phone Number" required name="phone">
+                    <span id="phoneError" style="color: red;"></span>
+                    <textarea id="Message" name="Message" placeholder="Message..." required></textarea>
+                    <span id="messageError" style="color: red;"></span>
+                    <input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="py-5">
+	<div class="container py-md-3">
+		<div class="row footer-grids pb-md-5 pb-3">	
+			<div class="col-md-3 col-sm-6 col-6">
+				<a href="#"> <i class="fa fa-phone"></i>Call Us</a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-6">
+				<a href="#"> <i class="fa fa-envelope"></i>Send Message</a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-6 mt-md-0 mt-2">
+				<a href="#"> <i class="fa fa-skype"></i>Skype Call</a>
+			</div>
+			<div class="col-md-3 col-sm-6 col-6 mt-md-0 mt-2">
+				<a href="#"> <i class="fa fa-comment"></i>Online Chat</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<section class="copyright py-4 text-center">
+	<div class="container">
+		<p>Your time is limited, so don't waste it living someone else's life.</p>
+	</div>
+</section>
+</body>
+</html>

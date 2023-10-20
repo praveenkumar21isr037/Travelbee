@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Travel Bee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css" /> 
+</head>
+<body>
+<header>
+	<div class="container agile-banner_nav">
+		<div class="row header-top">
+			<div class="col-md-7 top-right p-0">
+				<p><i class="fa fa-map-marker" aria-hidden="true"></i>Travel Bee agency,Erode
+			</div>
+		</div>
+	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			
+			<h1><a class="navbar-brand" href="index.html">Travel Bee</a></h1>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="services.html">Services</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Pages
+						</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="pricing.html">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="projects.html">Projects</a>
+					</li>
+					<li class="nav-item pr-lg-0">
+						<a class="nav-link pr-lg-0" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		  
+		</nav>
+	</div>
+</header>
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides callbacks callbacks1" id="slider4">
+					<li>
+						<div class="banner-top">
+						<div class="layer">
+							<div class="container">
+								<div class="banner-info_agile_w3ls">
+									<h2>Travel Things go as <span> per plan</span>. </h2>
+									<p>Holiday packages and special deals.</p>
+									<a href="about.html" class="mr-2">Read More <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+									<a href="contact.html">Contact Us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+						</div>
+					</li>
+				
+				</ul>
+			</div>
+		</div>
+<section class="booking py-5" id="booking">
+	<h3 class="text-center mb-4">Search Your Tour</h3>
+	<div class="container">
+		<div class="book-form">
+		   <form action="http://localhost:7000/trip" method="post">
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-6 px-2 form-time-w3layouts editContent">
+						<label class="editContent"><span class="fa fa-user" aria-hidden="true"></span>Price:Per Package</label>
+						<input type="text" placeholder="Budget"name="budget" required="">
+				</div>
+				<div class="col-md-3 col-sm-6 col-6 px-2 form-date-w3-agileits editContent">
+						<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> Tour place</label>
+						<select class="form-control" name="destination">
+							<option>Destination</option>
+							<option>London</option>
+							<option>Goa</option>
+							<option>Thailand</option>
+							<option>Sri-Lanka</option>
+						</select>
+				</div>
+				<div class="col-md-2 col-sm-4 col-6 px-2 form-left-agileits-w3layouts editContent">
+						<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Trip in</label>
+					<div class="agileits_w3layouts_main_gridl">
+						<input class="date has Datepicker" id="datepicker" name="tripin" type="date" value="Start Date">
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-4 col-6 px-2 form-left-agileits-w3layouts editContent">
+						<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Trip out</label>
+					<div class="agileits_w3layouts_main_gridl">
+						<input class="date has Datepicker" id="datepicker1" name="tripout" type="date" value="Return Date">
+					</div>
+				</div>
+				<div class="col-md-2 px-2 col-sm-4 col-6 form-left-agileits-submit editContent">
+					  <input type="submit" value="Search">
+				</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+<section class="bottom py-5">
+	<div class="container">
+		<div class="row bottom-grids">
+			<div class="col-md-6 grid1">
+				<h4 class="mb-4">Discount 10-35% off</h4>
+				<h3 class="mb-4">Travel the world with us</h3>
+				<a href="#">Read More</a>
+			</div>
+			<div class="col-md-3 mt-md-0 mt-4">
+				<img src="images/off.jpg" alt="" class="img-fluid" />
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>
